@@ -1,0 +1,21 @@
+n= int(input())
+s=input().upper()
+t=input().upper()
+count=0
+if(len(s)==n and len(t)==n):
+ for i in range(0,n):
+     if(s[i]!=t[i]):
+      while (s[i]!=t[i]):
+          t1=ord(s[i])+13
+          t1= (t1-26) if t1 > 90 else t1
+          if(t1==ord(t[i])):
+             s=s[:i]+t[i]+s[i+1:]
+             count+=1
+          else:
+              t2=ord(s[i])+1
+              t2= (t2-26) if t2 > 90 else t2
+              #print(t2)
+              #break
+              s=s[:i]+chr(t2)+s[i+1:]
+              count+=1
+print(count)
