@@ -1,0 +1,26 @@
+k = []
+n = int(input())
+count = 1
+for i in range(0,n):
+    a=int(input())
+    k.append(a)
+#    print (k)
+
+for j in range(0,n-1):
+    
+#    print (type(k[j]))
+#    p = 0
+#    q = 0
+
+    p = k[j]
+    q = k[j+1]
+
+#    print(p,q)
+
+    if(p>=q):
+        count = count + 1
+print(count)
+
+#        j=j+1
+#    else:
+#        print("else")
